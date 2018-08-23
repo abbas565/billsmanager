@@ -6,9 +6,9 @@ import configureStore from "./store/configureStore";
 import { addExpense } from "./actions/expenses";
 import { setTextFilter } from "./actions/filters";
 import getVisibleExpense from "./selectors/expenses";
-
 import "normalize.css/normalize.css";
 import "./styles/styles.scss";
+import "./firebase/firebase";
 
 const store = configureStore();
 
