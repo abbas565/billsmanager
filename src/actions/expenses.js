@@ -14,9 +14,18 @@ export const startAddExpense = (expenseData = {}) => {
       description = "",
       note = "",
       amount = 0,
-      createdAt = 0
+      createdAt = 0,
+      payMethod = "cash",
+      selectedFile = null
     } = expenseData;
-    const expense = { description, note, amount, createdAt };
+    const expense = {
+      description,
+      note,
+      amount,
+      createdAt,
+      payMethod,
+      selectedFile
+    };
 
     return database
       .ref(`users/${uid}/expenses`)

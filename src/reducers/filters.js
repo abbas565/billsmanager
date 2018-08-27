@@ -27,7 +27,7 @@ export default (state = filtersReducerDefaultState, action) => {
     case "SORT_BY_PAYMETHOD":
       return {
         ...state,
-        sortBy: "paymethod"
+        sortBy: "payMethod"
       };
     case "SET_START_DATE":
       return {

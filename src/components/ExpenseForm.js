@@ -14,9 +14,9 @@ export default class ExpenseForm extends React.Component {
     this.state = {
       description: props.expense ? props.expense.description : "",
       note: props.expense ? props.expense.note : "",
-      payMethod: props.expense ? props.expense.payMethod : "Cash",
+      payMethod: props.expense ? props.expense.payMethod : "cash",
       amount: props.expense ? (props.expense.amount / 100).toString() : "",
-      selectedFile: props.expense ? props.expense.selectedFile : null,
+      selectedFile: props.expense ? props.expense.selectedFile : "",
       createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
       calendarFocused: false,
       error: ""
@@ -33,7 +33,7 @@ export default class ExpenseForm extends React.Component {
   onPayMethodChange = e => {
     const payMethod = e.target.value;
     this.setState(() => ({ payMethod }));
-    console.log("paymethod:", payMethod);
+    console.log("payMethod:", payMethod);
   };
   fileSelectedHandler = e => {
     const selectedFile = e.target.files[0];
